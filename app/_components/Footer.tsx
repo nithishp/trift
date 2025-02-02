@@ -1,6 +1,7 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
-
+import {motion} from 'framer-motion'
 const Footer = () => {
     const FooterLinks = [
       {
@@ -25,7 +26,7 @@ const Footer = () => {
       },
     ];
   return (
-    <footer className="bg-nitblack m-3 rounded-3xl h-[30vh] py-10 px-[10vw] text-white flex  justify-between">
+    <motion.footer initial={{opacity:0.8,y:100}} whileInView={{opacity:1,y:0}} transition={{duration:0.5}} className="bg-nitblack m-3 rounded-3xl h-[30vh] py-10 px-[10vw] text-white flex  justify-between">
       <div>
         <Image
           height={100}
@@ -57,7 +58,7 @@ const Footer = () => {
           <p className="text-sm text-gray-500 text-nowrap">Terms of use</p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 

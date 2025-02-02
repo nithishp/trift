@@ -1,8 +1,47 @@
+'use client'
 import Image from 'next/image';
 import { title } from 'process';
 import React from 'react'
+import {delay, motion} from 'framer-motion'
 
 const Testimonials = () => {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+// Child variant
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+  const textVariants = {
+    hidden:{
+      opacity:0,
+      y:100
+    },
+    visible:{
+      opacity:1,
+      y:0,
+     transition:{
+      duration:0.5
+     }
+    }
+  }
     const testimonials = [
       {
         avatar: "/avatar-1.webp",
@@ -28,19 +67,46 @@ const Testimonials = () => {
     ];
   return (
     <div className="pb-20 flex flex-col items-center  text-center ">
-      <h1 className="border-[1px] border-gray-400 px-4 py-1 rounded-full">
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="border-[1px] border-gray-400 px-4 py-1 rounded-full"
+      >
         Testimonials
-      </h1>
-      <h1 className="text-5xl font-semibold mt-5">
+      </motion.h1>
+      <motion.h1
+        variants={textVariants}
+        initial="hidden"
+        whileInView="visible"
+        className="text-5xl font-semibold mt-5"
+      >
         Proof That We Don't Just Talk, We Build!
-      </h1>
-      <p className="max-w-[600px] mt-5 text-lg">
+      </motion.h1>
+      <motion.p
+        variants={textVariants}
+        initial="hidden"
+        whileInView="visible"
+        className="max-w-[600px] mt-5 text-lg"
+      >
         We let our projects do the talking. Don't just take our word for
         it—here's what our happy clients have to say about Trift!
-      </p>
-      <div className="my-20 flex gap-10">
+      </motion.p>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        className="my-20 flex gap-10"
+      >
         {testimonials.map((testimonial, index) => (
-          <div key={index} className={`flex flex-col p-5 text-start ${testimonial.bgColor} rounded-3xl`}>
+          <motion.div
+            variants={itemVariants}
+            initial='hidden'
+            whileInView='visible'
+            key={index}
+            className={`flex flex-col p-5 text-start ${testimonial.bgColor} rounded-3xl`}
+          >
             <div className="flex gap-2">
               <Image
                 src={testimonial.avatar}
@@ -56,10 +122,12 @@ const Testimonials = () => {
                 <h1 className="text-sm">{testimonial.title}</h1>
               </div>
             </div>
-            <p className="max-w-[300px] mt-5 font-semibold text-2xl">{testimonial.content}</p>
-          </div>
+            <p className="max-w-[300px] mt-5 font-semibold text-2xl">
+              {testimonial.content}
+            </p>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

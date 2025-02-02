@@ -19,6 +19,7 @@ const SlidingButton: React.FC<Props> = ({text,className}) => {
           viewBox="0 0 1024 1024"
           height="25px"
           width="25px"
+          className='rotate-180'
         >
           <path
             d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
