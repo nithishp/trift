@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./_components/Hero";
 import About from "./_components/About";
 import Services from "./_components/Services";
@@ -6,7 +5,6 @@ import TextBanner from "./_components/TextBanner";
 import Testimonials from "./_components/Testimonials";
 import Contact from "./_components/Contact";
 import Footer from "./_components/Footer";
-import NavBar from "./_components/NavBar";
 
 export default function Home() {
   return (

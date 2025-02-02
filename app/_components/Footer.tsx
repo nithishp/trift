@@ -26,18 +26,24 @@ const Footer = () => {
       },
     ];
   return (
-    <motion.footer initial={{opacity:0.8,y:100}} whileInView={{opacity:1,y:0}} transition={{duration:0.5}} className="bg-nitblack m-3 rounded-3xl h-[30vh] py-10 px-[10vw] text-white flex  justify-between">
+    <motion.footer
+      initial={{ opacity: 0.8, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-nitblack m-3 rounded-3xl h-[30vh] py-10 px-[10vw] text-white flex  justify-between"
+    >
       <div>
         <Image
           height={100}
           width={100}
           alt="Trift logo"
           src="/trift-logo-bg-transparent-rect.svg"
-          className='w-auto h-14 mb-3'
+          className="w-auto h-14 mb-3"
         />
-        <p className=''>
-          Got an idea? Let's turn it into a next-level digital experience. <br />we're
-          here to make it happen!!
+        <p className="">
+          Got an idea? Let&apos;s turn it into a next-level digital experience.{" "}
+          <br />
+          we&apos;re here to make it happen!!
         </p>
       </div>
       <div>

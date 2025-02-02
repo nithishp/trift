@@ -52,7 +52,7 @@ const Contact = () => {
           whileInView="visible"
           className="text-4xl font-semibold "
         >
-          Got ideas? We have the skills. let's team up.
+          Got ideas? We have the skills. let&apos;s team up.
         </motion.h1>
         <motion.p
           variants={textVariant}
@@ -72,7 +72,10 @@ const Contact = () => {
         >
           <div className="py-10 flex flex-col pr-10   gap-10">
             {/* CARD 1 */}
-            <motion.div variants={itemVariants} className="flex items-center gap-4 ">
+            <motion.div
+              variants={itemVariants}
+              className="flex items-center gap-4 "
+            >
               <div className="p-4 border-[1px] border-gray-300 rounded-lg">
                 <MessageCircleMore className="w-full h-full" />
               </div>
@@ -86,7 +89,10 @@ const Contact = () => {
             </motion.div>
             <div className="border-[1px]" />
             {/* CARD 2 */}
-            <motion.div variants={itemVariants} className="flex items-center gap-4 ">
+            <motion.div
+              variants={itemVariants}
+              className="flex items-center gap-4 "
+            >
               <div className="p-4 border-[1px] border-gray-300 rounded-lg">
                 <Building className="w-full h-full" />
               </div>
@@ -96,7 +102,7 @@ const Contact = () => {
                   Come and say hello at our office HQ
                 </p>
                 <p className="font-semibold mt-3">
-                  259/92A, Weaver's colony,
+                  259/92A, Weaver&apos;s colony,
                   <br />
                   Nagercoil-629003, Kanyakumari.
                 </p>
@@ -105,7 +111,10 @@ const Contact = () => {
             <div className="border-[1px]" />
 
             {/* CARD 3 */}
-            <motion.div variants={itemVariants} className="flex items-center gap-4 ">
+            <motion.div
+              variants={itemVariants}
+              className="flex items-center gap-4 "
+            >
               <div className="p-4 border-[1px] border-gray-300 rounded-lg">
                 <PhoneCall className="w-full h-full" />
               </div>

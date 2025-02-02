@@ -30,10 +30,7 @@ const ServiceContainer = () => {
       },
     }),
   };
-  const gridItemVariant = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+
 
   const avatars = [
     {
@@ -98,8 +95,8 @@ const ServiceContainer = () => {
         </h1>
         <div className=" lg:inline hidden w-1/3" />
         <p className="text-wrap text-center lg:text-center lg:w-1/3 ">
-          We're not just developers—we're digital architects who bring big
-          energy, fresh ideas, and zero boring vibes.
+          We&apos;re not just developers—we&apos;re digital architects who bring
+          big energy, fresh ideas, and zero boring vibes.
         </p>
       </motion.div>
       <div className="pt-10 grid grid-cols-3 gap-5">

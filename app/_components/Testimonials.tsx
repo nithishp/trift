@@ -1,8 +1,7 @@
 'use client'
 import Image from 'next/image';
-import { title } from 'process';
 import React from 'react'
-import {delay, motion} from 'framer-motion'
+import { motion} from 'framer-motion'
 
 const Testimonials = () => {
 const containerVariants = {
@@ -81,7 +80,7 @@ const itemVariants = {
         whileInView="visible"
         className="text-5xl font-semibold mt-5"
       >
-        Proof That We Don't Just Talk, We Build!
+        Proof That We Don&apos;t Just Talk, We Build!
       </motion.h1>
       <motion.p
         variants={textVariants}
@@ -89,8 +88,8 @@ const itemVariants = {
         whileInView="visible"
         className="max-w-[600px] mt-5 text-lg"
       >
-        We let our projects do the talking. Don't just take our word for
-        it—here's what our happy clients have to say about Trift!
+        We let our projects do the talking. Don&apos;t just take our word for
+        it—here&apos;s what our happy clients have to say about Trift!
       </motion.p>
       <motion.div
         variants={containerVariants}
@@ -102,8 +101,8 @@ const itemVariants = {
         {testimonials.map((testimonial, index) => (
           <motion.div
             variants={itemVariants}
-            initial='hidden'
-            whileInView='visible'
+            initial="hidden"
+            whileInView="visible"
             key={index}
             className={`flex flex-col p-5 text-start ${testimonial.bgColor} rounded-3xl`}
           >
