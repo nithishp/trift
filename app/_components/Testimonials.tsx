@@ -44,8 +44,8 @@ const itemVariants = {
     const testimonials = [
       {
         avatar: "/avatar-1.webp",
-        name: "John Doe",
-        title: "CEO, Company",
+        name: "Praveen",
+        title: "CEO, Praveen Enterprises",
         content: "Trift took our website from 'meh' to 'WOW!'",
         bgColor: "bg-[#e1f5fe]",
       },
