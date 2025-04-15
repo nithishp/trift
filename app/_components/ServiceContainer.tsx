@@ -70,7 +70,7 @@ const ServiceContainer = () => {
         variants={textVariant}
         initial="hidden"
         whileInView="visible"
-        className="flex justify-center items-center border-[1px] border-nitblack px-4 py-2 rounded-full w-max gap-2"
+        className="flex justify-center items-center border-[1px] border-nitblack px-4 py-2 rounded-full w-max gap-2 mx-auto lg:mx-0"
       >
         <Image
           width={5}
@@ -99,7 +99,7 @@ const ServiceContainer = () => {
           big energy, fresh ideas, and zero boring vibes.
         </p>
       </motion.div>
-      <div className="pt-10 grid grid-cols-3 gap-5">
+      <div className="pt-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
         {/* column 1 */}
         <motion.div
           variants={fadeInVariant}

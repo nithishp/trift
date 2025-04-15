@@ -8,9 +8,10 @@ import Footer from "./_components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-svh overflow-x-hidden ">
+    <main className="min-h-svh overflow-x-hidden  overflow-y-hidden ">
       {/* <NavBar/> */}
       <div className="px-5 md:px-10 lg:px-20 xl:px-[20vw] pt-[10vh] bg-background">
+        
         <Hero />
         <About />
         <Services />
@@ -20,9 +21,9 @@ export default function Home() {
         <Testimonials />
       </div>
       <div className="px-10 py-5 ">
-        <Contact/>
+        <Contact />
       </div>
-      <Footer/>
+      <Footer />
     </main>
   );
 }

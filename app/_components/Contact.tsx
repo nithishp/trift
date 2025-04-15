@@ -63,14 +63,14 @@ const Contact = () => {
           Tell us more about yourself and what you have got in your mind.
         </motion.p>
       </div>
-      <div className="flex mt-10">
+      <div className="flex flex-col-reverse lg:flex-row mt-10">
         <motion.div
           variants={ContainerVariants}
           initial="hidden"
           whileInView="visible"
-          className="w-1/3"
+          className="lg:w-1/3"
         >
-          <div className="py-10 flex flex-col pr-10   gap-10">
+          <div className="py-10 flex flex-col lg:pr-10   gap-10">
             {/* CARD 1 */}
             <motion.div
               variants={itemVariants}
@@ -123,16 +123,16 @@ const Contact = () => {
                 <p className="text-sm text-gray-500 italic">
                   Mon - Sat 9am to 6pm
                 </p>
-                <p className="font-semibold mt-3">Contact@trift.in</p>
+                <p className="font-semibold mt-3">+91 6380321733</p>
               </div>
             </motion.div>
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: 500 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0  }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="w-2/3 "
+          className="lg:w-2/3 "
         >
           <ShiftingContactForm />
         </motion.div>

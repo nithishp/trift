@@ -96,7 +96,7 @@ const itemVariants = {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "0px 0px -100px 0px" }}
-        className="my-20 flex gap-10"
+        className="my-20 flex flex-col lg:flex-row gap-10"
       >
         {testimonials.map((testimonial, index) => (
           <motion.div
